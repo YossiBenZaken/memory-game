@@ -26,14 +26,14 @@ export class BoardComponent implements OnInit {
   ngOnInit() {
     // Update status of game
     this._board.state.subscribe((state) => {
-      if (state.name == undefined) {
+      if (state.name === undefined) {
         this._router.navigateByUrl('');
       }
-      if(this.gameover != state.gameover) {
+      if(this.gameover !== state.gameover) {
         this.gameover = state.gameover
         this.bestscore = state.best
       }
-      if (this.count != state.count) {
+      if (this.count !== state.count) {
         this.count = state.count;
         this.teasePlayer(state.memory);
         this.name = state.name;

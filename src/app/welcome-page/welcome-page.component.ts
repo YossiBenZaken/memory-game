@@ -15,6 +15,6 @@ export class WelcomePageComponent {
     this._router.navigateByUrl('/game');
   }
   disabledBtn(n:any) {
-    this.disabled = n.value == '';
+    this.disabled = n.value === '';
   }
 }
