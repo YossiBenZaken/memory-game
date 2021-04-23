@@ -1,0 +1,26 @@
+button {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 0.2em solid;
+    background-color: transparent;
+    margin: 5px;
+}
+.green:active,.green.active {
+    background-color: green;
+}
+.red:active,.red.active {
+    background-color: red;
+}
+.blue:active,.blue.active {
+    background-color: blue;
+}
+.orange:active,.orange.active {
+    background-color: orange;
+}
+.cyan:active,.cyan.active {
+    background-color: cyan;
+}
+.purple:active,.purple.active {
+    background-color: purple;
+}

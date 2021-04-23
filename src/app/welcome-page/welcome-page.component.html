@@ -1,0 +1,5 @@
+<h1>Enter Your Name:</h1>
+<form (submit)="Start(name)">
+    <input #name type="text" (input)="disabledBtn(name)">
+    <button type="submit" (click)="Start(name)" [disabled]="disabled">Start</button>
+</form>

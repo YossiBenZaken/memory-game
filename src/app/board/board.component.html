@@ -1,0 +1,46 @@
+<div class="main">
+  <h1>
+    Name: {{ name }} Score: {{ (count - 1) * 10 }} Best Score:
+    {{ bestscore || 0 }}
+  </h1>
+  <div class="rowLight">
+    <app-lightbulb
+      [active]="colors.red"
+      color="red"
+      (clicked)="playerClick($event)"
+    ></app-lightbulb>
+    <app-lightbulb
+      [active]="colors.green"
+      color="green"
+      (clicked)="playerClick($event)"
+    ></app-lightbulb>
+    <app-lightbulb
+      [active]="colors.blue"
+      color="blue"
+      (clicked)="playerClick($event)"
+    ></app-lightbulb>
+  </div>
+  <div class="rowLight">
+    <app-lightbulb
+      [active]="colors.orange"
+      color="orange"
+      (clicked)="playerClick($event)"
+    ></app-lightbulb>
+    <app-lightbulb
+      [active]="colors.cyan"
+      color="cyan"
+      (clicked)="playerClick($event)"
+    ></app-lightbulb>
+    <app-lightbulb
+      [active]="colors.purple"
+      color="purple"
+      (clicked)="playerClick($event)"
+    ></app-lightbulb>
+  </div>
+  <div *ngIf="gameover">
+    <button (click)="Restart()">Restart Game</button>
+  </div>
+</div>
+<div class="sidebar">
+  <app-highscore></app-highscore>
+</div>

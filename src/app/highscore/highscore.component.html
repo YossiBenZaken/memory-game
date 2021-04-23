@@ -1,0 +1,9 @@
+<div *ngIf="highscore.length > 0">
+    <h2>Highscore</h2>
+    <ul>
+        <li *ngFor="let score of highscore">{{score.name}} - {{score.score}} - {{score.date}}</li>
+    </ul>
+</div>
+<div *ngIf="highscore.length == 0">
+    <h1>No HighScore</h1>
+</div>
