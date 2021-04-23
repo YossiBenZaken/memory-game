@@ -1,7 +1,6 @@
 import {
   Colors,
-  environment,
-  sleepTimer,
+  environment
 } from './../../environments/environment';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
@@ -75,7 +74,7 @@ export class BoardService {
       }
     }
     if (this.player.length === this.memory.length) {
-      sleepTimer(1000);
+      this.sleepTimer(1000);
       this.updateMemory();
     }
     return true;
@@ -102,4 +101,7 @@ export class BoardService {
       highscore: this.highscore
     })
   }
+  async sleepTimer(time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
+  };
 }

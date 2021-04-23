@@ -10,6 +10,4 @@ export enum Colors {
   cyan,
   purple,
 }
-export const sleepTimer = async (time) => {
-  return new Promise((resolve) => setTimeout(resolve, time));
-};
+

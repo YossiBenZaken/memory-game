@@ -1,4 +1,3 @@
-import { sleepTimer } from './../../environments/environment';
 import { BoardService } from './../services/board.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -50,9 +49,9 @@ export class BoardComponent implements OnInit {
   async teasePlayer(memory: string[]) {
     for (let i = 0; i < memory.length; i++) {
       this.colors[memory[i]] = true;
-      await sleepTimer(400);
+      await this._board.sleepTimer(400);
       this.colors[memory[i]] = false;
-      await sleepTimer(200);
+      await this._board.sleepTimer(200);
     }
   }
   Restart() {
