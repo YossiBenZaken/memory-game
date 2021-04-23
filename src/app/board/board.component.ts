@@ -24,6 +24,7 @@ export class BoardComponent implements OnInit {
   constructor(private _board: BoardService, private _router: Router) {}
 
   ngOnInit() {
+    // Update status of game
     this._board.state.subscribe((state) => {
       if (state.name == undefined) {
         this._router.navigateByUrl('');
@@ -45,6 +46,7 @@ export class BoardComponent implements OnInit {
       this._board.playerClick(color);
     }
   }
+  // Memory play the lightbulb one by one
   async teasePlayer(memory: string[]) {
     for (let i = 0; i < memory.length; i++) {
       this.colors[memory[i]] = true;

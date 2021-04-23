@@ -68,6 +68,7 @@ export class BoardService {
     this.setState();
   }
   checkGame(): boolean {
+    //Check if the player array and memory array is equal
     for (let i = 0; i < this.player.length; i++) {
       if (this.player[i] !== this.memory[i]) {
         return false;
@@ -79,7 +80,7 @@ export class BoardService {
     }
     return true;
   }
-
+  //Next Level
   updateMemory() {
     this.addToMemory(true);
     this.player = [];
